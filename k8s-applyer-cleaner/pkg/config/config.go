@@ -4,7 +4,7 @@ import (
 	"os"
     "io/ioutil"
 	"gopkg.in/yaml.v3"
-    "smib-applyers-cleaner/pkg/errors"
+    "k8s-applyer-cleaner/pkg/errors"
 )
 
 func GetCreds() map[string]string{

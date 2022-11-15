@@ -1,4 +1,4 @@
-module smib-applyers-cleaner
+module k8s-applyer-cleaner
 
 go 1.18
 

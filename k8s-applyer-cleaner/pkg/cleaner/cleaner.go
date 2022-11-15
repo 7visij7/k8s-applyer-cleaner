@@ -6,11 +6,11 @@ import (
 	"strings"
 	"io/ioutil"
 	"encoding/json"
-	"smib-applyers-cleaner/types"
-	"smib-applyers-cleaner/pkg/aes"
-	"smib-applyers-cleaner/pkg/http"
-	"smib-applyers-cleaner/pkg/config"
-	"smib-applyers-cleaner/pkg/errors"
+	"k8s-applyer-cleaner/types"
+	"k8s-applyer-cleaner/pkg/aes"
+	"k8s-applyer-cleaner/pkg/http"
+	"k8s-applyer-cleaner/pkg/config"
+	"k8s-applyer-cleaner/pkg/errors"
 )
 
 func ConvertDateToTimestump(date string) (int64) {

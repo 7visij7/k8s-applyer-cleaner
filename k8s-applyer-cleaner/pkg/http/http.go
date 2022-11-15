@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"net/http"
 	"crypto/tls"
-	"smib-applyers-cleaner/pkg/errors"
+	"k8s-applyer-cleaner/pkg/errors"
 )
 
 func SetPlayload(payload string) *bytes.Buffer {

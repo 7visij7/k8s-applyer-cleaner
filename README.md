@@ -1,23 +1,33 @@
-# k8s-applyer-cleaner
-Приложение реализовано на языке программирования - Golang.
+# K8s-applyer-cleaner
+> The result of application work is reduce to 0 replicas for deployment with "applyer" in name, which run more that one hour.
+---
+## Build and run application
+```Bash
+go build -o k8s-applyer-cleaner
+./k8s-applyer-cleaner
+```
+---
 
-Результатом выполнения работы Applyer cleaner является уменьшение в 0 всех подов Applyer, которые были задеплоины больше 1 часа назад.
+## Required variables and config
+> Required enviroment variables: 
++ OPENSHIFT_SERVER - url to API K8S
++ ENCRYPT_KEY - secret key AES. 
 
-Для запуска приложения необходимы переменные окружения:
-"OPENSHIFT_SERVER" - ссылка на API сервера Openshift.
-"ENCRYPT_KEY" - секретный ключ AES. 
-
-Для доступа приложения в Openshift необходимо добавить файл config.yaml, где указать namespace и token с доступом к этому немспейсу, в формате:
+> Also application works with config.yaml, where stored tokens to acces to namespaces. 
+e.g.:
+```Bash
 Namespace1: Token1
 Namespace2: Token2
+```
+---
+## Docker
 
-Token должен быть зашифрован алгоритмом шифрования AES, с использование секретного ключа ENCRYPT_KEY.
-
-Перед внесением изменений в репозиторий неободимо выполнить:
-go mod vendor
-
-Сборка  выполянется командой:
-go build -o smib-applyer-cleaner
-
-Запуск приложения  выполняется командой:
-./smib-applyer-cleaner
+> Build Docker image from a [Dockerfile](https://github.com/7visij7/k8s-applyer-cleaner/blob/main/Dockerfile)
+```
+docker build -t IMAGENAME
+```
+> Start application
+```
+docker run -it --rm IMAGENAME
+```
+---

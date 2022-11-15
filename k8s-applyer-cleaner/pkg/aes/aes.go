@@ -7,8 +7,8 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 	"crypto/cipher"
-	"smib-applyers-cleaner/types"
-	"smib-applyers-cleaner/pkg/errors"
+	"k8s-applyer-cleaner/types"
+	"k8s-applyer-cleaner/pkg/errors"
 )
 
 func  Encrypt(stringToEncrypt string) (encryptedString string) {

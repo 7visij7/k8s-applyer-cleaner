@@ -1,7 +1,7 @@
 package main
 
 import (
-    "smib-applyers-cleaner/cmd/applyersCleaner"
+    "k8s-applyer-cleaner/cmd/applyersCleaner"
 )
 
 func main() {

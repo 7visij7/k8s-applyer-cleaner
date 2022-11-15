@@ -1,7 +1,7 @@
 package applyersCleaner
 
 import (
-	"smib-applyers-cleaner/pkg/cleaner"
+	"k8s-applyer-cleaner/pkg/cleaner"
 )
 
 func Clean() {
